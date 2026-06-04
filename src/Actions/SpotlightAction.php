@@ -2,6 +2,7 @@
 
 namespace Wezlo\FilamentSearchSpotlight\Actions;
 
+use BackedEnum;
 use Closure;
 
 class SpotlightAction
@@ -33,9 +34,13 @@ class SpotlightAction
         return $this;
     }
 
-    public function icon(string $icon): static
+    public function icon(BackedEnum|string $icon): static
     {
-        $this->icon = $icon;
+        if($icon instanceof BackedEnum) {
+            $this->icon = $icon->value;
+        } else {
+            $this->icon = $icon;
+        }
 
         return $this;
     }
