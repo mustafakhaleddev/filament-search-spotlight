@@ -3,7 +3,7 @@
     "description": "Full-screen Spotlight / command-palette style search overlay for Filament panels. Aggregates records, pages, and custom actions with keyboard navigation and a preview pane.",
     "keywords": ["laravel", "filament", "search", "spotlight", "command-palette"],
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "library",
     "require": {
         "php": "^8.2",
