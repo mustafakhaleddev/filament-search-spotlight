@@ -57,6 +57,7 @@
     @foreach ($bindings as $b)
         x-mousetrap.global.{{ str_replace('+', '-', $b) }}.prevent="open()"
     @endforeach
+    x-on:open-spotlight.window="open()"
     x-on:keydown.escape.window="isOpen && close()"
     x-on:keydown.arrow-down.prevent="isOpen && $wire.moveDown()"
     x-on:keydown.arrow-up.prevent="isOpen && $wire.moveUp()"
