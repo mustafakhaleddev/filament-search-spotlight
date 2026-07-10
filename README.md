@@ -249,6 +249,17 @@ Both lists are owned client-side in `localStorage` under
 recent (deduped, max 10). Nothing is persisted server-side, so there is no
 database migration to run and no state to clear on logout.
 
+## Opening Spotlight programmatically
+
+Dispatch the `open-spotlight` browser event to open the overlay from a custom
+trigger.
+
+```blade
+<button x-on:click="$dispatch('open-spotlight')">
+    Search
+</button>
+```
+
 ## Tests
 
 Feature tests live alongside the consumer app under
